@@ -1,4 +1,4 @@
-pip install nltk spacy
+command 1: pip install nltk spacy
 NLTK (Natural Language Toolkit)
 
 
@@ -17,7 +17,7 @@ POS tagging
 Dependency parsing
 
 
-python -m spacy download en_core_web_sm
+command 2: python -m spacy download en_core_web_sm
 
 downloads a language model for spaCy.
 
@@ -40,3 +40,19 @@ Process numbers → predictions
 Raw text = Paragraph in a book 📖
 Tokens = Words separated on paper ✂️
 Numbers = Language AI understands 🔢
+
+
+1)Tokenization #from nltk.tokenize import word_tokenize, sent_tokenize
+2)Remove Stopwards#from nltk.corpus import stopwords #Remove useless words like is, the, and
+🔑 Simple Rule to Remember
+
+👉 Remove stopwords when:
+You are doing traditional ML (TF-IDF, BoW)Bag of Words (BoW) and (Term Frequency-Inverse Document Frequency)
+You want speed + simplicity
+
+👉 Don’t remove when:
+Meaning depends on context
+You're using modern NLP (BERT, embeddings, LLMs)
+
+3)STEMMING: from nltk.stem import PorterStemmer
+4)Lemmatization:Convert words to meaningful base form majorly used from spacy
